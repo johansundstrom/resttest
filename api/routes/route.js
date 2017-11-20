@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  var account = require('../controllers/Controller');
+  var account = require('../controllers/controller');
 
   // Account Routes
   app.route('/accounts')
