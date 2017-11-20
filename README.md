@@ -25,7 +25,7 @@
 
 ### REST exempel
 * Kontohanteringssystem
-1. Skapa konto
-2. Visa konto
-3. Redigera konto
-4. Radera konto
+1. Skapa konto (email, pwd) - form-text, form-password, button
+2. Visa konto (epost, skapat-datum, api-key) - text
+3. Redigera konto (redigera pwd) - form-pwd, button
+4. Radera konto - button
