@@ -18,3 +18,14 @@
 ### CONTROLLER
 * Hanterar användarbegäran
 * Exempelvs HTTP GET eller POST requests vid klick på GUI
+
+## REST
+* Representational State Transfer
+
+
+### REST exempel
+* Kontohanteringssystem
+1. Skapa konto
+2. Visa konto
+3. Redigera konto
+4. Radera konto
