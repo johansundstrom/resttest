@@ -2,10 +2,10 @@
 
 
 var mongoose = require('mongoose'),
-  Task = mongoose.model('Tasks');
+  Account = mongoose.model('Tasks');
 
 exports.list_account = function(req, res) {
-  Task.find({}, function(err, task) {
+  Account.find({}, function(err, task) {
     if (err)
       res.send(err);
     res.json(task);
@@ -14,39 +14,39 @@ exports.list_account = function(req, res) {
 
 
 exports.create_account = function(req, res) {
-  var new_task = new Task(req.body);
-  new_task.save(function(err, task) {
+  var new_account = new Account(req.body);
+  new_account.save(function(err, account) {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(account);
   });
 };
 
 
 exports.read_account = function(req, res) {
-  Task.findById(req.params.taskId, function(err, task) {
+  Account.findById(req.params.accountId, function(err, account) {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(account);
   });
 };
 
 
 exports.update_account = function(req, res) {
-  Task.findOneAndUpdate({_id: req.params.taskId}, req.body, {new: true}, function(err, task) {
+  Account.findOneAndUpdate({_id: req.params.accountId}, req.body, {new: true}, function(err, account) {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(account);
   });
 };
 
 
 exports.delete_account = function(req, res) {
-  Task.remove({
-    _id: req.params.taskId
-  }, function(err, task) {
+  Account.remove({
+    _id: req.params.accountId
+  }, function(err, account) {
     if (err)
       res.send(err);
-    res.json({ message: 'Task successfully deleted' });
+    res.json({ message: 'deleted' });
   });
 };
