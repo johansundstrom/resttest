@@ -1,4 +1,4 @@
-# resttest
+# REST test
 
 ## Model-View-Controller (MVC)
 * En arkitekturmodell som bygger på att separera delar i en app
@@ -11,10 +11,10 @@
 ### MODEL
 * Model hanterar data och logik
 
-### View
+### VIEW
 * Presentation eller användargränssnitt
 * Både visa (lista data) och manipulera (knappar)
 
-### Controller
+### CONTROLLER
 * Hanterar användarbegäran
 * Exempelvs HTTP GET eller POST requests vid klick på GUI
