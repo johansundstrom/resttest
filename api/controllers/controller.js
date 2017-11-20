@@ -2,7 +2,7 @@
 
 
 var mongoose = require('mongoose'),
-  Account = mongoose.model('Accounts');
+  Account = mongoose.model('Account');
 
 exports.list_account = function(req, res) {
   Account.find({}, function(err, task) {
