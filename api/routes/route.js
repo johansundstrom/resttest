@@ -5,7 +5,7 @@ module.exports = function(app) {
   // Account Routes
   app.route('/account')
     .get(account.list_account)
-    .post(account.create_a_account);
+    .post(account.create_account);
 
 
   app.route('/account/:taskId')
