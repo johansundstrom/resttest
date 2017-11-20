@@ -4,21 +4,29 @@ var Schema = mongoose.Schema;
 
 
 var TaskSchema = new Schema({
-  name: {
+  username: {
     type: String,
-    required: 'Kindly enter the name of the task'
+    required: 'nytt konto'
   },
   Created_date: {
     type: Date,
     default: Date.now
   },
+  passw: {
+    type: String,
+    required: '12345678'
+  },
+  apikey: {
+    type: String,
+    default: 'adghbbh583nlgd3t'
+  },
   status: {
     type: [{
       type: String,
-      enum: ['pending', 'ongoing', 'completed']
+      enum: ['pending', 'cleared', 'deleted']
     }],
     default: ['pending']
   }
 });
 
-module.exports = mongoose.model('Tasks', TaskSchema);
+module.exports = mongoose.model('Account',accountSchema);
