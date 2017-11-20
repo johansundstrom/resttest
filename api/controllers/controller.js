@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
   Account = mongoose.model('Account');
 
 exports.list_account = function(req, res) {
-  Account.find({}, function(err, task) {
+  Account.find({}, function(err, account) {
     if (err)
       res.send(err);
     res.json(account);
