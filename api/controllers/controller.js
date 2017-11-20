@@ -8,7 +8,7 @@ exports.list_account = function(req, res) {
   Account.find({}, function(err, task) {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(account);
   });
 };
 
