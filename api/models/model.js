@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-var TaskSchema = new Schema({
+var accountSchema = new Schema({
   username: {
     type: String,
     required: 'nytt konto'
