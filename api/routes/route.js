@@ -1,15 +1,15 @@
 'use strict';
 module.exports = function(app) {
-  var todoList = require('../controllers/Controller');
+  var account = require('../controllers/Controller');
 
-  // todoList Routes
-  app.route('/tasks')
-    .get(todoList.list_all_tasks)
-    .post(todoList.create_a_task);
+  // Account Routes
+  app.route('/account')
+    .get(account.list_account)
+    .post(account.create_a_account);
 
 
-  app.route('/tasks/:taskId')
-    .get(todoList.read_a_task)
-    .put(todoList.update_a_task)
-    .delete(todoList.delete_a_task);
+  app.route('/account/:taskId')
+    .get(account.read_account)
+    .put(account.update_account)
+    .delete(account.delete_account);
 };
