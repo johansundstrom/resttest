@@ -14,6 +14,7 @@
 ### VIEW
 * Presentation eller användargränssnitt
 * Både visa (lista data) och manipulera (knappar)
+* I detta fall, webbsida som genererar HTTP anrop
 
 ### CONTROLLER
 * Hanterar användarbegäran
@@ -21,7 +22,6 @@
 
 ## REST
 * Representational State Transfer
-
 
 ### REST exempel
 * Kontohanteringssystem
