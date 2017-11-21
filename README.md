@@ -10,6 +10,7 @@
 
 ### MODEL
 * Model hanterar data och logik
+* Schema, hantering av db
 
 ### VIEW
 * Presentation eller användargränssnitt
