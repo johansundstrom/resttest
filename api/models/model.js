@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 var accountSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: 'n saknas'
   },
   username: {
     type: String
@@ -35,4 +35,4 @@ var accountSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Account', accountSchema);
+module.exports = mongoose.model('Accounts', accountSchema);

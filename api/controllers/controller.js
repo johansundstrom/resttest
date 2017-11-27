@@ -1,9 +1,9 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-  Account = mongoose.model('Account');
+  Account = mongoose.model('Accounts');
 
-exports.list_account = function(req, res) {
+exports.list_accounts = function(req, res) {
   Account.find({}, function(err, account) {
     if (err)
       res.send(err);
@@ -15,7 +15,7 @@ exports.list_account = function(req, res) {
 exports.create_account = function(req, res) {
   var new_account = new Account(req.body);
   new_account.save(function(err, account) {
-    console.log(Account.name);
+    //console.log(req.body);  /debug
     if (err)
       res.send(err);
     res.json(account);
