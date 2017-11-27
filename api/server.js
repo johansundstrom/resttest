@@ -12,10 +12,8 @@ mongoose.connect('mongodb://be9.asuscomm.com/accountdb', { useMongoClient: true}
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
 var routes = require('./routes/route'); //importing route
 routes(app); //register the route
-
 
 app.listen(port);
 console.log('Account RESTful API server started on: ' + port);
