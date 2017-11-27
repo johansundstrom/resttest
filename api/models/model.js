@@ -1,24 +1,30 @@
 'use strict';
+
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
 var accountSchema = new Schema({
-  username: {
+  name: {
     type: String,
-    required: 'nytt konto'
+    required: true
   },
-  Created_date: {
+  username: {
+    type: String
+    //required: 'username saknas'
+  },
+  created_date: {
     type: Date,
     default: Date.now
   },
   passw: {
-    type: String,
-    required: '12345678'
+    type: String
+    //required: 'passw saknas',
+    //default: 'pa$$w0rd'
   },
   apikey: {
-    type: String,
-    default: 'adghbbh583nlgd3t'
+    type: String
+    //default: 'adghbbh583nlgd3t'
   },
   status: {
     type: [{
@@ -29,4 +35,4 @@ var accountSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Account',accountSchema);
+module.exports = mongoose.model('Account', accountSchema);

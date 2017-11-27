@@ -1,6 +1,5 @@
 'use strict';
 
-
 var mongoose = require('mongoose'),
   Account = mongoose.model('Account');
 
@@ -16,6 +15,7 @@ exports.list_account = function(req, res) {
 exports.create_account = function(req, res) {
   var new_account = new Account(req.body);
   new_account.save(function(err, account) {
+    console.log(Account.name);
     if (err)
       res.send(err);
     res.json(account);
