@@ -3,26 +3,36 @@
 ## Model-View-Controller (MVC)
 * En arkitekturmodell som bygger på att separera delar i en app
 * Målet är att återanvända kod och möjliggöra parallell programmering
-* Kravet inom MVC är att isolera problemen
+* Kravet inom MVC är att isolera uppgifterna
 * Användare ser _Views_ och använder _Controllers_
 * En _Controller_ manipulerar _Models_
 * _Models_ uppdaterar _Views_
 
 ### MODEL
-* Model hanterar data och logik
-* Schema, hantering av db
+* Hanterar data och logik
+* En del av _Model_ är _Schema_ som hanterar db
 
 ### VIEW
-* Presentation eller användargränssnitt
-* Både visa (lista data) och manipulera (knappar)
+* _View_ är presentation och/eller användargränssnitt
+* Visa (lista data) och manipulera (knappar)
 * I detta fall, webbsida som genererar HTTP anrop
 
 ### CONTROLLER
 * Hanterar användarbegäran
-* Exempelvs HTTP GET eller POST requests vid klick på GUI
+* Exempelvs HTTP GET/POST/PUT/DELETE requests vid klick på GUI
 
 ## REST
 * Representational State Transfer
+* En HTTP arkitektur för CRUD
+* Twitter REST API, Facebook REST API, Dropbox REST API är några exempel
+* Ingen klientdata sparas vid överföringar
+
+### REST exempel
+* <url>/api/accounts        //Skapa konto (POST - C)
+* <url>/api/accounts        //listar konton (GET - R)
+* <url>/api/accounts/:id    //delete konto (PUT - U)
+* <url>/api/accounts/:id    //uppdatera konto (DELETE - D)
+
 
 ### REST exempel
 * Kontohanteringssystem
