@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 var accountSchema = new Schema({
     name: {
         type: String,
-        required: 'n saknas'
+        required: 'namn saknas'
     },
     username: {
         type: String,

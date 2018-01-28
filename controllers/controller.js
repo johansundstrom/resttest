@@ -3,6 +3,10 @@
 var mongoose = require('mongoose'),
     Account = mongoose.model('Accounts');
 
+exports.default = function(req, res) {
+    res.send('<html><body><p>use <a href="http://localhost:3000/api/accounts/">/api/accounts/</a></p></body></html>');
+}
+
 exports.list_accounts = function(req, res) {
     Account.find({}, function(err, account) {
         if (err)

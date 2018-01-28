@@ -5,16 +5,16 @@ module.exports = function(app) {
 
     // Account Routes
     app.route('/')
-        .post()
+        .get(account.default); //funkar
 
 
     app.route('/api/accounts')
-        .get(account.list_accounts) //Funkar
+        .get(account.list_accounts) //funkar
         .post(account.create_account); //funkar
 
 
     app.route('/api/accounts/:accountId')
-        .get(account.read_account) //Funkar
-        .put(account.update_account) //Funkar
-        .delete(account.delete_account); //Funkar
+        .get(account.read_account) //funkar
+        .put(account.update_account) //funkar
+        .delete(account.delete_account); //funkar
 };
