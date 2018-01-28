@@ -28,7 +28,7 @@
 * Ingen klientdata sparas vid överföringar
 
 ### REST exempel
-* <url>/api/accounts        //Skapa konto (POST - C)
+* <url>/api/accounts        //skapa konto (POST - C)
 * <url>/api/accounts        //listar konton (GET - R)
 * <url>/api/accounts/:id    //delete konto (PUT - U)
 * <url>/api/accounts/:id    //uppdatera konto (DELETE - D)
