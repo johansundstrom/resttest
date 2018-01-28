@@ -9,22 +9,23 @@ var accountSchema = new Schema({
         type: String,
         required: 'namn saknas'
     },
+    email: {
+        type: String,
+        trim: true,
+        lowercase: true,
+        unique: true,
+        //validate: [validateEmail, 'Please fill a valid email address'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'ogiltig epostadress'],
+        required: 'email saknas'
+    },
     username: {
         type: String,
         required: 'username saknas'
-    },
-    created_date: {
-        type: Date,
-        default: Date.now
     },
     passw: {
         type: String,
         //required: 'passw saknas',
         default: 'RBzFg3*r'
-    },
-    apikey: {
-        type: String,
-        default: 'adghbbh583nlgd3t'
     },
     status: {
         type: [{
@@ -32,6 +33,14 @@ var accountSchema = new Schema({
             enum: ['pending', 'cleared', 'deleted']
         }],
         default: ['pending']
+    },
+    apikey: {
+        type: String,
+        default: 'adghbbh583nlgd3t'
+    },
+    created_date: {
+        type: Date,
+        default: Date.now
     }
 });
 

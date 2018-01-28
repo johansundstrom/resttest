@@ -19,7 +19,7 @@ exports.list_accounts = function(req, res) {
 exports.create_account = function(req, res) {
     var new_account = new Account(req.body);
     new_account.save(function(err, account) {
-        //console.log(req.body);  /debug
+        //console.log(req.body);  //debug
         if (err)
             res.send(err);
         res.json(account);
