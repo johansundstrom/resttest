@@ -1,52 +1,52 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-  Account = mongoose.model('Accounts');
+    Account = mongoose.model('Accounts');
 
 exports.list_accounts = function(req, res) {
-  Account.find({}, function(err, account) {
-    if (err)
-      res.send(err);
-    res.json(account);
-  });
+    Account.find({}, function(err, account) {
+        if (err)
+            res.send(err);
+        res.json(account);
+    });
 };
 
 
 exports.create_account = function(req, res) {
-  var new_account = new Account(req.body);
-  new_account.save(function(err, account) {
-    //console.log(req.body);  /debug
-    if (err)
-      res.send(err);
-    res.json(account);
-  });
+    var new_account = new Account(req.body);
+    new_account.save(function(err, account) {
+        //console.log(req.body);  /debug
+        if (err)
+            res.send(err);
+        res.json(account);
+    });
 };
 
 
 exports.read_account = function(req, res) {
-  Account.findById(req.params.accountId, function(err, account) {
-    if (err)
-      res.send(err);
-    res.json(account);
-  });
+    Account.findById(req.params.accountId, function(err, account) {
+        if (err)
+            res.send(err);
+        res.json(account);
+    });
 };
 
 
 exports.update_account = function(req, res) {
-  Account.findOneAndUpdate({_id: req.params.accountId}, req.body, {new: true}, function(err, account) {
-    if (err)
-      res.send(err);
-    res.json(account);
-  });
+    Account.findOneAndUpdate({ _id: req.params.accountId }, req.body, { new: true }, function(err, account) {
+        if (err)
+            res.send(err);
+        res.json(account);
+    });
 };
 
 
 exports.delete_account = function(req, res) {
-  Account.remove({
-    _id: req.params.accountId
-  }, function(err, account) {
-    if (err)
-      res.send(err);
-    res.json({ message: 'deleted' });
-  });
+    Account.remove({
+        _id: req.params.accountId
+    }, function(err, account) {
+        if (err)
+            res.send(err);
+        res.json({ message: 'raderat' });
+    });
 };
