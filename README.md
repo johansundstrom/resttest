@@ -40,3 +40,6 @@
 2. Visa konto (epost, skapat-datum, api-key) - text
 3. Redigera konto (redigera pwd) - form-pwd, button
 4. Radera konto - button
+
+#### B9
+* url:port/api/b9/floors/rooms/temps
