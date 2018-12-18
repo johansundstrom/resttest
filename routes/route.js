@@ -4,13 +4,20 @@ module.exports = function(app) {
     var account = require('../controllers/controller'); //modulimport
 
     // Account Routes
+    //app.route('/')
+    //    .get(account.default); //funkar
+
     app.route('/')
         .get(account.default); //funkar
+
+    app.route('/list')
+        .get(account.list_accounts);
+
 
     app.route('/views')
         .get(account.list_accounts);
 
-    app.route('/accounts')
+    app.route('/list/')
         .get(account.list_accounts) //funkar
         .post(account.create_account); //funkar
 

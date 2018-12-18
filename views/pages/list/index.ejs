@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css">
+ 
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>List members</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>username</th>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>status</th>
+                        <th>erase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% account_a.forEach(function(account) { %>
+                    <tr>
+                        <td><%= account.username %></td>
+                        <td><%= account.name %></td>
+                        <td><%= account.email %></td>
+                        <td><a href="/list/?_id=<%= account._id %>"><%= account.status %></a></td>
+                        <!--a href="/list/?_id=<%= account._id %>"><%= account.username %>  - <%= account.name %> (<%= account.status %>)</a><br-->
+                        <td><a href="/list/?_id=<%= account._id %>">erase</a></td>
+                    <% }) %>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <form action="/list/" method="post">
+                <label>username</label><br>
+                <input name="username" type="text"><br>
+                <label>name</label><br>
+                <input name="name" type="text"><br>
+                <label>email</label><br>
+                <input name="email" type="text"><br>
+                <input type="submit" name="send">
+            </form>
+        </div>
+      
+    
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+

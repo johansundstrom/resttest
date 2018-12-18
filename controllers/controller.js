@@ -5,15 +5,21 @@ var mongoose = require('mongoose'),
 
 exports.default = function(req, res) {
     //res.send('<html><body><p>use <a href="http://localhost:3000/api/accounts/">/api/accounts/</a></p></body></html>');
-    res.sendFile("index.html")
+    //res.sendFile("index.html")
+    //res.render('views/index')
+    res.render('pages/index', {
+        drinks: 1,
+        tagline: 2
+    });
 }
+
+
 
 exports.list_accounts = function(req, res) {
     Account.find({}, function(err, account) {
         if (err)
             res.send(err);
-        //res.json(account);
-        res.render(views, locals);
+        res.render('pages/list/index', {account_a: account});
     });
 };
 
@@ -21,13 +27,16 @@ exports.list_accounts = function(req, res) {
 exports.create_account = function(req, res) {
     var new_account = new Account(req.body);
     new_account.save(function(err, account) {
-        //console.log(req.body);  //debug
         if (err)
             res.send(err);
-        res.json(account);
+        //res.render('pages/list/index', {account_a: account});
+    });
+    Account.find({}, function(err, account) {
+        if (err)
+            res.send(err);
+        res.render('pages/list/index', {account_a: account});
     });
 };
-
 
 exports.read_account = function(req, res) {
     Account.findById(req.params.accountId, function(err, account) {
