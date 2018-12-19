@@ -30,8 +30,8 @@
 ### REST exempel
 * <url>/api/accounts        //skapa konto (POST - C)
 * <url>/api/accounts        //listar konton (GET - R)
-* <url>/api/accounts/:id    //delete konto (PUT - U)
-* <url>/api/accounts/:id    //uppdatera konto (DELETE - D)
+* <url>/api/accounts/:id    //uppdatera konto (PUT - U)
+* <url>/api/accounts/:id    //radera konto (DELETE - D)
 
 
 ### REST exempel
