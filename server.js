@@ -7,13 +7,14 @@ var express = require('express'),
 
 // mongoose instans
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://be9.asuscomm.com/accountdb', { useMongoClient: true }); //eliminerar ett problem med mongoose 4.11
+//mongoose.connect('mongodb://be9.asuscomm.com/accountdb', { useMongoClient: true }); //eliminerar ett problem med mongoose 4.11
+mongoose.connect('mongodb://be9.asuscomm.com/accountdb', {useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./routes/route'); //importing route
-routes(app); //register the route
+var routes = require('./routes/route'); //importing routes
+routes(app); //register the routes
 
 app.use(function(req, res) {
     res.status(404).send({ url: req.originalUrl + ' hittade inte' })
