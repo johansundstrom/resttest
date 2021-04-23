@@ -34,7 +34,7 @@
 * <url>/api/accounts/:id    //radera konto (DELETE - D)
 
 ### Postman
-* Sänd data i Postman i *Body* och *x-www-form-urlencoded*
+* Sänd data i <a href="https://www.postman.com/">Postman</a> i *Body* och *x-www-form-urlencoded*
 * Key som krävs är [username, email. name] 
 * Valfria keys är [passw, status['pending', 'cleared', 'deleted'], apikey, created_date]
 
